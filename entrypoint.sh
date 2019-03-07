@@ -1,4 +1,5 @@
 #/bin/sh
 
 echo "timemachine:${PASSWORD}" | chpasswd && \
-/usr/sbin/netatalk
+chown -R timemachine /timemachine && \
+/usr/sbin/netatalk -d
